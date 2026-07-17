@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+config/config.yaml
+data/raw/*
+data/archive/*
+logs/*
+!data/raw/.gitkeep
+!data/archive/.gitkeep
+!logs/.gitkeep
+.env

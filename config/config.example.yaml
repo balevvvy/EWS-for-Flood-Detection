@@ -1,0 +1,5 @@
+camera:
+  ip: "<IP_KAMERA_DI_SINI>"
+  username: "<USERNAME_DI_SINI>"
+  password: "<PASSWORD_DI_SINI>"
+  channel: 0

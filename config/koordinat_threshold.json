@@ -1,0 +1,12 @@
+{
+  "pan": 143.08,
+  "tilt": 60.92,
+  "zoom": 128.0,
+  "_pan_abs": 14308.0,
+  "_tilt_abs": 6092.0,
+  "_zoom_abs": 2500.0,
+  "_zoom_value": 1810.0,
+  "_zoom_map": 16384.0,
+  "_focus_position": 4172.347552,
+  "_raw_text": "status.AbsPosition[0]=14308\r\nstatus.AbsPosition[1]=6092\r\nstatus.AbsPosition[2]=2500\r\nstatus.Action=Unknown\r\nstatus.ActionID=0\r\nstatus.Focus.FocusPosition=4172.347552\r\nstatus.Focus.Status=Idle\r\nstatus.FocusMapValue=18701\r\nstatus.Iris.IrisValue=1.000000\r\nstatus.Iris.Status=Idle\r\nstatus.MoveStatus=Idle\r\nstatus.PanTiltStatus=Idle\r\nstatus.Postion[0]=143.080000\r\nstatus.Postion[1]=60.920000\r\nstatus.Postion[2]=128.000000\r\nstatus.PresetID=0\r\nstatus.TaskName=Unknown\r\nstatus.TrackStatus=Idle\r\nstatus.ZoomMapValue=16384\r\nstatus.ZoomStatus=Idle\r\nstatus.ZoomValue=1810\r\n"
+}

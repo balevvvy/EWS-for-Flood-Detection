@@ -1,0 +1,14 @@
+{
+  "papan_duga_utama": {
+    "ref_points": [
+      {
+        "mark_cm": 200.0,
+        "y_pixel": 412
+      },
+      {
+        "mark_cm": 300.0,
+        "y_pixel": 145
+      }
+    ]
+  }
+}
