@@ -44,22 +44,13 @@ import requests
 import re
 import json
 import time
-import yaml
-import os
 
 # ==================== KONFIGURASI ====================
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "config", "config.yaml")
-
-with open(CONFIG_PATH, "r") as f:
-    config_data = yaml.safe_load(f)
-
-cam_conf = config_data.get("camera", {})
-IP = cam_conf.get("ip", "10.52.9.101")
-USERNAME = cam_conf.get("username", "admin")
-PASSWORD = cam_conf.get("password", "Admin123.")
-CHANNEL = cam_conf.get("channel", 0)
-FILE_KOORDINAT = os.path.join(BASE_DIR, "config", "koordinat_threshold.json")
+IP = "10.52.9.101"
+USERNAME = "admin"
+PASSWORD = "Admin123."      # ganti sesuai password kamera
+CHANNEL = 0                     # Dahua biasanya pakai channel=0 untuk PTZ CGI (bukan 1)
+FILE_KOORDINAT = "koordinat_threshold.json"
 
 BASE_URL = f"http://{IP}/cgi-bin/ptz.cgi"
 AUTH = requests.auth.HTTPDigestAuth(USERNAME, PASSWORD)

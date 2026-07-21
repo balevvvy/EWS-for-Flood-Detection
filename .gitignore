@@ -1,11 +1,46 @@
+# Virtual environment
 venv/
+.env
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Config secrets
 config/config.yaml
+
+# Data (keep directory structure)
 data/raw/*
 data/archive/*
-logs/*
 !data/raw/.gitkeep
 !data/archive/.gitkeep
+
+# Logs
+logs/*
 !logs/.gitkeep
-.env
+
+# Model weights (too large for GitHub, share via cloud)
+*.pt
+*.onnx
+*.engine
+*.tflite
+
+# Large media files
+*.mp4
+*.avi
+*.mkv
+
+# Temporary files
+tree_output.txt
+*.tmp
