@@ -38,7 +38,7 @@ _cam_config = load_camera_config()
 IP = _cam_config["ip"]
 USERNAME = _cam_config["username"]
 PASSWORD = _cam_config["password"]
-CHANNEL = _cam_config["channel"]
+CHANNEL = 1  # Dahua RTSP video stream wajib channel 1
 RTSP_URL = f"rtsp://{USERNAME}:{PASSWORD}@{IP}:554/cam/realmonitor?channel={CHANNEL}&subtype=0"
 
 THRESHOLDS_PATH = os.path.join(BASE_DIR, "config", "cv_thresholds.json")
