@@ -1,7 +1,3 @@
-// ==================== Operator-only JS ====================
-// Reset kamera, sensitivitas/blur kontrol, alert log, CSV export
-
-// --- Reset Kamera ke Papan Duga ---
 async function resetPTZ() {
     const btn = document.getElementById('btn-reset-camera');
     const feedback = document.getElementById('ptz-feedback');

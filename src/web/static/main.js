@@ -1,7 +1,3 @@
-// ==================== EWS Banjir — Main JS ====================
-// Dipakai oleh index.html (publik) dan operator.html
-
-// --- Jam Digital ---
 function updateClock() {
     const now = new Date();
     const timeString = now.toLocaleTimeString('id-ID', {

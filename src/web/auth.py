@@ -7,9 +7,6 @@ import hashlib
 import secrets
 import time
 
-# ==================== KONFIGURASI OPERATOR ====================
-# Untuk prototipe PKL, cukup hardcode satu akun.
-# Password di-hash menggunakan SHA-256.
 OPERATORS = {
     "operator": {
         "password_hash": hashlib.sha256("ews2026".encode()).hexdigest(),
