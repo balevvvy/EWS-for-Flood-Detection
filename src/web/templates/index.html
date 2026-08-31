@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EWS Banjir — Monitoring Ketinggian Air</title>
+    <meta name="description" content="Sistem Peringatan Dini Banjir — Pantau ketinggian air secara real-time melalui kamera CCTV dan Computer Vision.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="status-dot" id="connection-dot"></div>
+                <h1>EWS Banjir <span>Monitoring Ketinggian Air</span></h1>
+            </div>
+            <div class="header-right">
+                <span class="clock mono" id="clock">--:--:-- WIB</span>
+                <a href="/login" class="nav-link">LOGIN ›</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-grid">
+            <!-- Kolom Kiri: Video -->
+            <div class="card video-card">
+                <div class="card-header">
+                    <span class="card-title">Live Camera Stream</span>
+                </div>
+                <div class="card-body">
+                    <img id="video-feed" class="video-feed" src="/video_feed" alt="Live Video Feed">
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Status + Grafik -->
+            <div class="side-panel">
+                <!-- Status Card -->
+                <div class="card status-card">
+                    <div class="card-header">
+                        <span class="card-title">Status Saat Ini</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="status-value normal" id="status-text">NORMAL</div>
+                        <div class="status-label">Ketinggian Air</div>
+                        <div class="water-level-value mono" id="water-level-text">—</div>
+                        <div class="status-timestamp mono" id="last-update">Terakhir diperbarui: —</div>
+                    </div>
+                </div>
+
+                <!-- Grafik Tren -->
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <span class="card-title">Tren Ketinggian Air (1 Jam)</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-wrapper">
+                            <canvas id="waterChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>

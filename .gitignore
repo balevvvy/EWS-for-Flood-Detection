@@ -44,3 +44,6 @@ logs/*
 # Temporary files
 tree_output.txt
 *.tmp
+*.db
+*.sqlite3
+data/*.db

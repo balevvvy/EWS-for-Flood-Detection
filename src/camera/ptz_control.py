@@ -44,13 +44,22 @@ import requests
 import re
 import json
 import time
+import os
+import sys
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
+from src.camera.config_loader import load_camera_config
 
 # ==================== KONFIGURASI ====================
-IP = "10.52.9.101"
-USERNAME = "admin"
-PASSWORD = "Admin123."      # ganti sesuai password kamera
+_cam_config = load_camera_config()
+IP = _cam_config["ip"]
+USERNAME = _cam_config["username"]
+PASSWORD = _cam_config["password"]
 CHANNEL = 0                     # Dahua biasanya pakai channel=0 untuk PTZ CGI (bukan 1)
-FILE_KOORDINAT = "koordinat_threshold.json"
+FILE_KOORDINAT = os.path.join(BASE_DIR, "config", "koordinat_threshold.json")
 
 BASE_URL = f"http://{IP}/cgi-bin/ptz.cgi"
 AUTH = requests.auth.HTTPDigestAuth(USERNAME, PASSWORD)

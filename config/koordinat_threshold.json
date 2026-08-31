@@ -1,12 +1,12 @@
 {
-  "pan": 143.0,
-  "tilt": 60.91,
-  "zoom": 58.88,
-  "_pan_abs": 14300.0,
-  "_tilt_abs": 6091.0,
-  "_zoom_abs": 1150.0,
-  "_zoom_value": 850.0,
-  "_zoom_map": 13649.0,
-  "_focus_position": 3900.380999,
-  "_raw_text": "status.AbsPosition[0]=14300\r\nstatus.AbsPosition[1]=6091\r\nstatus.AbsPosition[2]=1150\r\nstatus.Action=Unknown\r\nstatus.ActionID=0\r\nstatus.Focus.FocusPosition=3900.380999\r\nstatus.Focus.Status=Idle\r\nstatus.FocusMapValue=17749\r\nstatus.Iris.IrisValue=1.000000\r\nstatus.Iris.Status=Idle\r\nstatus.MoveStatus=Idle\r\nstatus.PanTiltStatus=Idle\r\nstatus.Postion[0]=143.000000\r\nstatus.Postion[1]=60.910000\r\nstatus.Postion[2]=58.880000\r\nstatus.PresetID=0\r\nstatus.TaskName=Unknown\r\nstatus.TrackStatus=Idle\r\nstatus.ZoomMapValue=13649\r\nstatus.ZoomStatus=Idle\r\nstatus.ZoomValue=850\r\n"
+  "pan": 179.85,
+  "tilt": -9.72,
+  "zoom": 6.144,
+  "_pan_abs": 17985.0,
+  "_tilt_abs": -972.0,
+  "_zoom_abs": 120.0,
+  "_zoom_value": 120.0,
+  "_zoom_map": 1477.0,
+  "_focus_position": 1755.214303,
+  "_raw_text": "status.AbsPosition[0]=17985\r\nstatus.AbsPosition[1]=-972\r\nstatus.AbsPosition[2]=120\r\nstatus.Action=Unknown\r\nstatus.ActionID=0\r\nstatus.Focus.FocusPosition=1755.214303\r\nstatus.Focus.Status=Idle\r\nstatus.FocusMapValue=10240\r\nstatus.Iris.IrisValue=2.000000\r\nstatus.Iris.Status=Idle\r\nstatus.MoveStatus=Idle\r\nstatus.PanTiltStatus=Idle\r\nstatus.Postion[0]=179.850000\r\nstatus.Postion[1]=-9.720000\r\nstatus.Postion[2]=6.144000\r\nstatus.PresetID=0\r\nstatus.TaskName=Unknown\r\nstatus.TrackStatus=Idle\r\nstatus.ZoomMapValue=1477\r\nstatus.ZoomStatus=Idle\r\nstatus.ZoomValue=120\r\n"
 }

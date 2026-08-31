@@ -5,11 +5,20 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("FrameGrabber")
 
+import os
+import sys
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
+from src.camera.config_loader import load_camera_config
+
 # ==================== KONFIGURASI ====================
-# Sama persis dengan ptz_control.py — satu sumber kebenaran
-IP = "10.52.9.101"
-USERNAME = "admin"
-PASSWORD = "Admin123."      # ganti sesuai password kamera
+_cam_config = load_camera_config()
+IP = _cam_config["ip"]
+USERNAME = _cam_config["username"]
+PASSWORD = _cam_config["password"]
 CHANNEL = 1                 # RTSP Dahua pakai channel=1 (berbeda dari PTZ CGI yang pakai 0)
 
 # Dahua RTSP URL format:

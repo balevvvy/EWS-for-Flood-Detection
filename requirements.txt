@@ -3,3 +3,8 @@ numpy
 requests
 pyyaml
 pytest
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+aiofiles
