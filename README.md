@@ -38,69 +38,10 @@ Sistem monitoring ketinggian air dan deteksi dini banjir berbasis *classical com
 │       ├── auth.py                # Manajemen autentikasi operator
 │       ├── database.py            # Handler database SQLite
 │       ├── static/                # Asset CSS dan JavaScript dashboard
-│       └── templates/             # Template antarmuka web (Jinja2)
+│       └── templates/             # Template antarmuka web 
 ├── requirements.txt
 └── test_frame.jpg                 # Gambar referensi baseline kondisi normal
 ```
-
----
-
-## Instalasi
-
-1. Clone repositori:
-   ```bash
-   git clone https://github.com/balevvvy/EWS-for-Flood-Detection.git
-   cd EWS-for-Flood-Detection
-   ```
-
-2. Buat dan aktifkan virtual environment:
-   ```bash
-   python -m venv venv
-   # Windows:
-   venv\Scripts\activate
-   # Linux/macOS:
-   source venv/bin/activate
-   ```
-
-3. Install dependensi:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Buat file konfigurasi kamera dari template:
-   ```bash
-   cp config/config.example.yaml config/config.yaml
-   ```
-   Edit `config/config.yaml` dan sesuaikan IP, username, dan password kamera fisik Anda.
-
----
-
-## Penggunaan
-
-### 1. Kalibrasi Visual Garis Ambang Batas
-Jalankan tool kalibrasi untuk menentukan letak garis batas WASPADA (kuning) dan SIAGA (merah) pada gambar papan duga:
-```bash
-python scripts/calibrate_ui.py
-```
-* Klik pada batas bawah zona kuning, lalu klik pada batas bawah zona merah. Tekan `s` untuk menyimpan.
-
-### 2. Kalibrasi Posisi Kamera PTZ
-Untuk menyimpan posisi awal kamera mengarah ke papan duga:
-```bash
-python src/camera/ptz_control.py
-```
-* Pilih menu `1` untuk membaca dan menyimpan koordinat PTZ saat ini.
-
-### 3. Menjalankan Dashboard Web
-Jalankan web server FastAPI:
-```bash
-python -m uvicorn src.web.app:app --host 0.0.0.0 --port 8000
-```
-* Buka browser di `http://localhost:8000` untuk Dashboard Publik.
-* Buka `http://localhost:8000/login` untuk masuk ke Dashboard Operator (`username: operator`, `password: ews2026`).
-
----
-
 ## Spesifikasi Teknis
 
 - **Metode Pengolahan Citra**: Classical CV (Frame Differencing, Morphological Filtering, Bottom-Up Projection).
